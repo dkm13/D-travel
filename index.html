@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/049c2c6974.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <title>Travel website</title>
+
+    <script>
+      $(document).ready(function () {
+        $("#icon").click(function () {
+          $("ul").toggleClass("show");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section class="mini-nav">
+      <div class="log">
+        <i class="fas fa-sign-in-alt"></i>
+        <p>Account login</p>
+        <div class="sec-log">
+          <i class="fas fa-user-plus"></i>
+          <p>Not a member yet? Sign up here</p>
+        </div>
+      </div>
+      <div class="icons-contact">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </section>
+
+    <section class="navbar">
+      <nav>
+        <label class="logo"><span>D-</span>Travel</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#offers">offers</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><i id="search-icon" class="fas fa-search"></i></li>
+        </ul>
+        <!-- <label id="icon">
+            <i onclick="reChange()" class="fas fa-bars"></i>
+        </label> -->
+        <label id="icon">
+          <i id="ic2" onclick="reChange('ic2')" class="fas fa-bars"></i>
+      </label>
+    </section>
+
+    <section class="home-img">
+         <img id="img" src="https://th.bing.com/th/id/R.da05449fd67533ff0f1d3d940fa57d9c?rik=mfHYToIKpRcv3w&riu=http%3a%2f%2fimg.xcitefun.net%2fusers%2f2014%2f07%2f359772%2cxcitefun-bosphorus-bridge-5.jpg&ehk=iIpsDKGsuSXZPBarFD%2bg7ltL8TYJlzk5fwiN3eDuqTU%3d&risl=&pid=ImgRaw&r=0">
+         <i id="left" onclick="prev()" class="fas fa-chevron-left"></i>
+         <i id="right" onclick="next()" class="fas fa-chevron-right"></i>
+         <div class="home-text">
+           <h2>TO TRAVEL IS TO LIVE</h2>
+           <p>Traveling is a good way to learn about the world</p>
+           <button id="map">
+             Show on map
+           </button>
+           <button id="more-info">
+            More Info
+          </button>
+         </div>
+    </section>
+
+    <section class="find">
+      <h2>Find your holiday</h2>
+      <label for="destination">
+        Where
+      </label>
+      <input type="text" id="destination" placeholder="destination"/>
+
+      <label for="date">
+        When
+      </label>
+      <input type="date" id="date" placeholder="select date" />
+      <button>Search</button>
+    </section>
+
+
+
+    <section id="offers" class="offers">
+      <h2>Offers</h2>
+      <p>See the best offers over the world</p>
+
+      <div class="offers-container">
+
+         <div class="offer">
+           <img src="https://th.bing.com/th/id/OIP.ZOQHl5O7FH-gbWtYKiR_kgHaE8?pid=ImgDet&rs=1" alt="image" />
+           <div class="offer-text">
+              <h3>DUBAI</h3>
+              <p>Price: $458</p>
+           </div>
+         </div>
+
+        <div class="offer">
+            <img src="https://th.bing.com/th/id/OIP.xNyZh7NE_EwjQN6bByKBHgHaEo?pid=ImgDet&rs=1" alt="image" />
+            <div class="offer-text">
+              <h3>SINGAPORE</h3>
+              <p>Price: $748</p>
+            </div>
+        </div>
+     
+
+      <div class="offer">
+        <img src="https://th.bing.com/th/id/R.de8449e7059c6e0e32a4d9771d812f97?rik=8qKy5ESlI8ud8A&pid=ImgRaw&r=0" alt="image" />
+        <div class="offer-text">
+           <h3>ITALY</h3>
+           <p>Price: $398</p>
+        </div>
+      </div>
+
+      <div class="offer">
+        <img src="https://th.bing.com/th/id/OIP.haDqsmP5az2jk01FXuTPowHaE8?pid=ImgDet&rs=1" alt="image" />
+        <div class="offer-text">
+           <h3>FRANCE</h3>
+           <p>Price: $558</p>
+        </div>
+      </div>
+   </div>
+
+    </section>
+
+
+    <!--
+      Holidays
+    -->
+    <section class="results">
+       <h2>Our Stats:</h2>
+
+       <div class="counter-up">
+        <div class="content">
+
+          <div class="box">
+            <div class="icon"><i id="a" class="fas fa-plane-departure"></i></div>
+            <div class="counter">83</div>
+            <div class="text">Destinations</div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i id="b" class="fas fa-users"></i></div>
+            <div class="counter">3236</div>
+            <div class="text">Clients</div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i id="c" class="fas fa-globe-europe"></i></div>
+            <div class="counter">21</div>
+            <div class="text">Countries</div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i id="d" class="fas fa-hourglass-end"></i></div>
+            <div class="counter">278</div>
+            <div class="text">Completed tours</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="blog" class="blog">
+      <h2>Happy Clients:</h2>
+      <div class="client-container">
+        <div class="client">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+             incididunt ut labore et dolore magna aliqua. 
+          </p>
+          <h3>Client: John doe</h3>
+        </div>
+         <div class="client">
+          <p>Felis eget nunc lobortis mattis. Aliquam ultrices sagittis orci a scelerisque purus
+             semper eget. Senectus et netus et malesuada fames
+          </p>
+          <h3>Client: James Smith</h3>
+        </div>
+        <div class="client">
+          <p>Elementum integer enim neque volutpat ac tincidunt. Ac tortor vitae purus faucibus 
+            ornare suspendisse sed nisi lacus.
+          </p>
+          <h3>Client: Adam James</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="name">
+      <h2><span>D-</span>TRAVEL</h2>
+    </section>
+
+    <section class="footer" id="contact">
+        <div class="footer-container">
+
+          <div class="footcon newsletter">
+            <h2>Newsletter</h2>
+            <p>Subscribe to our newsletter to receive the latest news through email</p>
+            <input type="email" placeholder="xyz@example.com"/>
+            <button type="submit">Sub</button>
+          </div>
+        
+
+          <div class="footcon latest">
+            <h2>News:</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Elementum integer enim neque volutpat ac tincidunt. Ac tortor vitae purus faucibus 
+          </div>
+       
+
+        <div class="footcon address">
+          <h2>Address</h2>
+          <p>High park street 04 - 54</p>
+          <p>+222999555(only example number dont try it)</p>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div> 
+      </div>
+
+      <p id="links"><a href="#">Home</a> | 
+        <a href="#offers">Offers</a> | 
+        <a href="#blog">Blog</a> | 
+        <a href="#contact">Contact</a>
+     </p>
+     <p id="copy">Copyright © Created by <a href="https://github.com/dkm13" target="_blank">DKM13</a></p>
+    </section>
+
+
+
+
+     <script>
+       $(document).ready(function(){
+    $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+    });
+  });
+     </script>
+
+    <!--JAVASCRIPT-->
+    <script src="script.js"></script>
+  </body>
+</html>
